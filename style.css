@@ -1,0 +1,205 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1818;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: rgba(237, 233, 233, 0.955);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #1a1818;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #1a1818;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #6dc421c1;
+}
+
+.opciones {
+    display: flex;
+    gap: 15px;
+}
+
+/* Ajustar el contenedor de las cartas */
+.cartas-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espaciado entre cartas */
+    justify-content: center;
+    
+}
+
+/* Ajustar el contenedor de las cartas con un solo borde */
+.carta-item {
+    width: 101px; /* Ancho fijo */
+    height: 160px; /* Alto fijo */
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background-color: black; /* Fondo blanco */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para un efecto visual */
+    
+}
+
+.carta-item img {
+    width: 100%; /* Ajustar al ancho del contenedor */
+    height: 100%; /* Ajustar al alto del contenedor */
+    object-fit: cover; /* Asegurar que la imagen se ajuste sin deformarse */
+    border: none; /* Eliminar bordes de la imagen */
+}
+
+.carta-nombre {
+    position: absolute;
+    bottom: 3px;
+    
+    left: 4px;
+    right: 4px;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+    display: none; /* Ocultar por defecto */
+    border-radius: 10px;
+}
+
+.carta-numero {
+position: absolute;
+    top: 2px;
+    /* Mantenerlo cerca del borde superior */
+    left: 2px;
+    /* Cambiar de derecha a izquierda */
+    background-color: black;
+    color: #ffffff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 12px;
+    display: none; /* Ocultar por defecto */
+}
+
+.carta-loteria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0px; /* Espacio entre cartas */
+    margin-top: 1px;
+    width: auto; /* Ajustar automáticamente al contenido */
+    padding: 0; /* Eliminar padding */
+    background-color: transparent; /* Fondo transparente */
+    border: 3px solid #000000;
+    
+}
+
+.modo-repeticion {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.modo-repeticion select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+}
+
+.carta-item.repetido {
+    border: 3px dashed #FFD700;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+@media (max-width: 600px) {
+    .modo-repeticion {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    body * {
+        visibility: hidden;
+    }
+
+    .cartas-container, .cartas-container * {
+        visibility: visible;
+    }
+
+    .cartas-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4 columnas por fila */
+        gap: 10px;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .carta-loteria {
+        width: 100%;
+        height: auto;
+        page-break-inside: avoid; /* Evitar que las cartas se dividan entre páginas */
+    }
+
+    .controls {
+        display: none;
+    }
+
+    @page {
+        size: letter landscape; /* Tamaño carta en orientación horizontal */
+        margin: 10mm; /* Márgenes pequeños */
+    }
+}
+
+@media (max-width: 768px) {
+    .carta-loteria {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .carta-loteria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+

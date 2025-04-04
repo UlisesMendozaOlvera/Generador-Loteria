@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Cartas de Lotería</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   
+    <div class="container">
+        <h1>Generador de Cartas de Lotería</h1>
+
+        <div class="controls">
+            <button id="generarCarta">Generar Cartas</button>
+            <button id="imprimirCarta">Imprimir Cartas</button>
+            <button id="guardarCartas">Guardar Cartas</button> <!-- Nuevo botón -->
+
+            <div class="opciones">
+                <label>
+                    <input type="checkbox" id="mostrarNombres" checked>
+                    Mostrar nombres
+                </label>
+                <label>
+                    <input type="checkbox" id="mostrarNumeros" checked>
+                    Mostrar números
+                </label>
+            </div>
+               
+            <div class="modo-repeticion">
+                <label>Modo de repetición:</label>
+                <select id="modoRepeticion" title="Modo de repetición">
+                    <option value="ninguno">Sin repetición</option>
+                    <option value="esquinas">Repetir en esquinas</option>
+                    <option value="centro">Repetir en centro</option>
+                </select>
+            </div>
+            <div class="cantidad-cartas">
+                <label for="cantidadCartas">Cantidad de cartas:</label>
+                <input type="number" id="cantidadCartas" min="1" max="10" value="1">
+            </div>
+        </div>
+
+        <div class="cartas-container" id="cartasContainer">
+            <!-- Aquí se generarán las cartas -->
+        </div>
+  
+    
+</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
