@@ -22,7 +22,7 @@ Este proyecto es una aplicación web que genera cartas de lotería personalizada
 
 1. Clona este repositorio o descarga los archivos.
    ```bash
-   git clone https://github.com/tu-usuario/generador-cartas-loteria.git
+   git clone https://github.com/UlisesMendozaOlvera/Generador-Loteria
 
 ## Uso
 
