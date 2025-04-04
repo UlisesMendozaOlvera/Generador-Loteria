@@ -23,37 +23,6 @@ Este proyecto es una aplicación web que genera cartas de lotería personalizada
 1. Clona este repositorio o descarga los archivos.
    ```bash
    git clone https://github.com/tu-usuario/generador-cartas-loteria.git
-Aquí tienes un archivo `README.md` para tu proyecto:
-
-```markdown
-# Generador de Cartas de Lotería
-
-Este proyecto es una aplicación web que genera cartas de lotería personalizadas. Permite generar múltiples cartas, imprimirlas y guardarlas como imágenes individuales.
-
-## Características
-
-- Generar cartas de lotería con imágenes, nombres y números.
-- Personalizar la cantidad de cartas a generar.
-- Opciones para mostrar/ocultar nombres y números en las cartas.
-- Modos de repetición para las cartas (sin repetición, esquinas, centro).
-- Imprimir las cartas generadas en formato tamaño carta.
-- Guardar cada carta generada como una imagen individual en formato PNG.
-
-## Tecnologías utilizadas
-
-- **HTML5**: Estructura de la página.
-- **CSS3**: Estilos y diseño responsivo.
-- **JavaScript**: Lógica de generación de cartas y funcionalidades interactivas.
-- **html2canvas**: Biblioteca para capturar cartas como imágenes.
-
-## Instalación
-
-1. Clona este repositorio o descarga los archivos.
-   ```bash
-   git clone https://github.com/tu-usuario/generador-cartas-loteria.git
-   ```
-2. Asegúrate de que las imágenes de las cartas estén en la carpeta `imagenes/` dentro del proyecto.
-3. Abre el archivo `index.html` en tu navegador o utiliza un servidor local para evitar problemas de CORS.
 
 ## Uso
 
@@ -106,14 +75,3 @@ Si tienes problemas para cargar las imágenes, ejecuta el proyecto en un servido
    ```
 3. Abre `http://localhost:8000` en tu navegador.
 
-## Créditos
-
-- **Imágenes**: Las imágenes de las cartas de lotería deben estar en la carpeta `imagenes/`.
-- **Desarrollador**: [Tu Nombre o Usuario de GitHub]
-
-## Licencia
-
-Este proyecto está bajo la licencia MIT. Puedes usarlo, modificarlo y distribuirlo libremente.
-```
-
-"# Generador-Loteria" 
